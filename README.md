@@ -10,6 +10,8 @@
 - [Data cleaning](#cleaning)
 - [Exploratory data analysis](#exploratory)
     - [Distribution of survival rate](#survival_dist) 
+    - [Title attribute to numeric](#title_num)
+- [Decision Tree model](#tree)
 
 <a id="purpose"></a>
 ## Purpose
@@ -81,6 +83,23 @@ From the second graph, it is easy to see the distribution of non-survivers with 
     <img alt="Logo" title="#logo" width="500px" src="graphs/survival.png">
     <br>
 </h3>
+
+<a id="title_num"></a>
+### Title attribute to numeric
+The title attribute was converted into a numeric scale
+
+<a id="tree"></a>
+## Decision Tree model
+We used to use a decision tree model to predict the outcome of a passenger based on his or her attributes. To do so we separated our initial data into a training set, containing 80% of the original data, and a testing set, containing the remaining 20%. For our iniital model we set a random state = 0 and a maximium depth of the 3 of three. This parameters will be tuned. 
+
+This initial model obtained an overall 78.7% accuracy. Given the skew shown above to people not surving, the model has a better accuracy predicting a non-surviver, with an accuracy of 80%, and has a decent accuracy predicting survivors of 77%. 
+
+<h3 align="left">
+    <img alt="Logo" title="#logo" width="500px" src="graphs/initial_matrix.png">
+    <br>
+</h3>
+
+
 
 
 
