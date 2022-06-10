@@ -134,7 +134,7 @@ In the long run, it seems to converge to an accuracy of around 77% as depth incr
 Using the optimized paramter this is how the final confusion matrix looks. It contains a 90% in predicting causalities and a 70% in predicting surivals. 
 
 <h3 align="left">
-    <img alt="Logo" title="#logo" width="500px" src="graphs/optimal.png">
+    <img alt="Logo" title="#logo" width="500px" src="graphs/optimal1.png">
     <br>
 </h3>
 
