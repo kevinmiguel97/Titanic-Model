@@ -12,6 +12,9 @@
     - [Distribution of survival rate](#survival_dist) 
     - [Title attribute to numeric](#title_num)
 - [Decision Tree model](#tree)
+    - [Checking for correlation](#corr)
+    - [Tuning parameters](#tuning)
+    - [Optimizing depth of tree](#depth)
 
 <a id="purpose"></a>
 ## Purpose
@@ -99,8 +102,40 @@ This initial model obtained an overall 78.7% accuracy. Given the skew shown abov
     <br>
 </h3>
 
+<a id="corr"></a>
+### Checking for correlations
+Below, the correlation matrix is shown. We have a couple of variables that present the higuer correlations:
+1.- Class and fare: naturally classes are directly related to the price passengers paid
+2.- Number of parent and children and number of children and spouse (41%): Potentially wealthier families bring more of their family. 
+3.- Sex and title (36%): It makes sense that most most titles are attached to the sex of the passenger. 
 
+Howerver, none of this correlations seem strong enough to be producing a multicollinearity bias problem.
 
+<h3 align="left">
+    <img alt="Logo" title="#logo" width="500px" src="graphs/corr.png">
+    <br>
+</h3>
 
+<a id="tuning"></a>
+### Tuning parameters
+
+<a id="depth"></a>
+### Optimizing depth of tree
+The plot below shows the evolution of the overall accuracy of the model whith different depths. We reach an overall maximium when the depth is equal to 5 with an accuracy of 82.1%. 
+
+In the long run, it seems to converge to an accuracy of around 77% as depth increases. 
+
+<h3 align="left">
+    <img alt="Logo" title="#logo" width="500px" src="graphs/tunning.png">
+    <br>
+</h3>
+
+### Optimal model outcome
+Using the optimized paramter this is how the final confusion matrix looks. It contains a 90% in predicting causalities and a 70% in predicting surivals. 
+
+<h3 align="left">
+    <img alt="Logo" title="#logo" width="500px" src="graphs/optimal.png">
+    <br>
+</h3>
 
 
